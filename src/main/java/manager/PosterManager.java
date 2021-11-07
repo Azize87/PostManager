@@ -1,7 +1,7 @@
 package manager;
 
 public class PosterManager {
-    private Movie [] movies = new Movie[0];
+    private Movie[] movies = new Movie[0];
     private int moviesCount;
 
     public PosterManager(int moviesCount) {
@@ -12,21 +12,21 @@ public class PosterManager {
         this.moviesCount = 10;
     }
 
-    public void addMovie(Movie movieItem){
+    public void addMovie(Movie movieItem) {
 
         int len = movies.length + 1;
-        Movie [] tmp = new Movie[len];
+        Movie[] tmp = new Movie[len];
 
-        for (int i = 0; i< movies.length; i++){
+        for (int i = 0; i < movies.length; i++) {
             tmp[i] = movies[i];
         }
 
-        int lastIndex = tmp.length-1;
+        int lastIndex = tmp.length - 1;
         tmp[lastIndex] = movieItem;
         movies = tmp;
     }
 
-    public Movie[] getLastMovies(){
+    public Movie[] getLastMovies() {
         int resultLength;
         if (moviesCount > movies.length) {
             resultLength = movies.length;
@@ -35,8 +35,8 @@ public class PosterManager {
         }
 
         Movie[] result = new Movie[resultLength];
-        for (int i = 0; i< resultLength; i++) {
-            int index = movies.length - i -1;
+        for (int i = 0; i < resultLength; i++) {
+            int index = movies.length - i - 1;
             result[i] = movies[index];
         }
 

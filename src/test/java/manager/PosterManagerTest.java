@@ -1,6 +1,6 @@
 package manager;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class PosterManagerTest {
 
@@ -11,7 +11,7 @@ class PosterManagerTest {
 
         Movie first = new Movie(1, "first");
         Movie sec = new Movie(2, "sec");
-        
+
         manager.addMovie(first);
         manager.addMovie(sec);
 
